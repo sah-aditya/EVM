@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <h2>Events</h2>
+    <form action="/event" method="post">
+        <input type="text" name="title" placeholder="Event Title" required>
+        <textarea name="description" placeholder="Event Description" required></textarea>
+        <input type="date" name="date" required>
+        <input type="text" name="venue" placeholder="Venue" required>
+        <input type="number" name="organizerId" placeholder="Organizer ID" required>
+        <button type="submit">Create Event</button>
+    </form>
+    <h2>Tickets</h2>
+    <form action="/ticket" method="post">
+        <input type="number" name="eventId" placeholder="Event ID" required>
+        <input type="number" name="price" placeholder="Price" required>
+        <input type="number" name="quantity" placeholder="Quantity" required>
+        <button type="submit">Create Ticket</button>
+    </form>
+</body>
+</html>
